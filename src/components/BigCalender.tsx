@@ -25,6 +25,7 @@ const BigCalendar = () => {
       views={["work_week", "day"]}
       view={view}
       style={{ height: "98%" }}
+      
       messages={{
         next: "sig",
         previous: "ant",
@@ -35,8 +36,9 @@ const BigCalendar = () => {
         work_week: "Semana",
       }}
       onView={handleOnChangeView}
-      min={new Date(2025, 1, 0, 8, 0, 0)}
-      max={new Date(2025, 1, 0, 17, 0, 0)}
+      defaultDate={new Date(2024, 10, 4, 8, 0, 0)}
+      min={new Date(2025, 1, 0, 7, 0, 0)}
+      max={new Date(2025, 1, 0, 13, 0, 0)}
     />
   );
 };
