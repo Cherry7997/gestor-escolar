@@ -40,7 +40,7 @@ const SingleTeacherPage = () => {
                     curp: "XEXX010101HNEXXXA4",
                     phone: "+1 234 567 89",
                     address: "C. 1 x 6 y 8",
-                    bloodType: "A+",
+                    bloodType: "555501234",
                     dateOfBirth: "2000-01-01",
                     sex: "male",
                     img: "/public/profile.jpg",
@@ -53,7 +53,7 @@ const SingleTeacherPage = () => {
               <div className="flex items-center justify-between gap-2 flex-wrap text-xs text-verde-200 font-medium">
                 <div className="w-full md:w-1/3 lg:w-full 2xl:w-1/3 flex items-center gap-2">
                   <Image src="/blood.png" alt="" width={14} height={14} />
-                  <span>A+</span>
+                  <span>555501234</span>
                 </div>
                 <div className="w-full md:w-1/3 lg:w-full 2xl:w-1/3 flex items-center gap-2">
                   <Image src="/date.png" alt="" width={14} height={14} />
