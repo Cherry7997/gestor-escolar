@@ -9,43 +9,43 @@ const menuItems = [
       {
         icon: "/home.png",
         label: "Inicio",
-        href: "/admin",
+        href: "/estudiante",
         visible: ["admin", "teacher", "student", "parent"],
       },
       {
         icon: "/teacher.png",
         label: "Docentes",
-        href: "/list/teachers",
+        href: "/list/docentes",
         visible: ["admin", "teacher"],
       },
       {
         icon: "/student.png",
         label: "Estudiantes",
-        href: "/list/students",
+        href: "/list/estudiantes",
         visible: ["admin", "teacher"],
       },
       {
         icon: "/subject.png",
         label: "Materias",
-        href: "/list/lessons",
+        href: "/list/materias",
         visible: ["admin"],
       },
       {
         icon: "/class.png",
         label: "Grupos",
-        href: "/list/classes",
+        href: "/list/grupos",
         visible: ["admin", "teacher"],
       },
       {
         icon: "/exam.png",
         label: "Exámenes",
-        href: "/list/exams",
+        href: "/list/examenes",
         visible: ["admin", "teacher", "student", "parent"],
       },
       {
         icon: "/result.png",
         label: "Calificaciones",
-        href: "/list/results",
+        href: "/list/calificaciones",
         visible: ["admin", "teacher", "student", "parent"],
       },
       {
@@ -57,7 +57,7 @@ const menuItems = [
       {
         icon: "/calendar.png",
         label: "Eventos",
-        href: "/list/events",
+        href: "/list/eventos",
         visible: ["admin", "teacher", "student", "parent"],
       },
     ],
@@ -68,13 +68,13 @@ const menuItems = [
       {
         icon: "/profile.png",
         label: "Perfil",
-        href: "/profile",
+        href: "/perfil",
         visible: ["admin", "teacher", "student", "parent"],
       },
       {
         icon: "/setting.png",
         label: "Configuración",
-        href: "/settings",
+        href: "/configuracion",
         visible: ["admin", "teacher", "student", "parent"],
       },
       {

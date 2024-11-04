@@ -29,6 +29,7 @@
 .rbc-toolbar-label {
   text-align: right !important;
   padding: 0px 20px !important;
+  color: #003321;
 }
 
 .rbc-btn-group:last-child {
@@ -37,12 +38,14 @@
 
 .rbc-btn-group:last-child button {
   border: none !important;
-  background-color: #f1f0ff !important;
+  background-color: #F9F6E9 !important;
+  color: #004d32 !important;
   margin-left: 2px !important;
 }
 
 .rbc-toolbar button.rbc-active {
-  background-color: #dbdafe !important;
+  background-color: #004d32 !important;
+  color: #faf7ea !important;
   box-shadow: none !important;
 }
 
@@ -63,7 +66,7 @@
 }
 
 .rbc-time-gutter.rbc-time-column .rbc-timeslot-group {
-  padding: 0px 20px !important;
+  padding: 0px 7px !important;
 }
 
 .rbc-timeslot-group {
@@ -77,8 +80,8 @@
 .rbc-event {
   border: none !important;
   color: black !important;
-  padding: 10px !important;
-  margin: 10px !important;
+  padding: 8px !important;
+  margin: 8px !important;
   width: 99% !important;
 }
 
@@ -108,6 +111,6 @@
 }
 
 .rbc-event-label{
-  color: gray !important;
+  color: rgb(96, 96, 96) !important;
   margin-bottom: 5px;
 }
