@@ -13,8 +13,13 @@
 }
 
 .react-calendar__tile--active {
-  background-color: #c3ebfa !important;
-  color: black !important;
+  background-color: #004d32 !important;
+  color: #faf7ea !important;
+}
+
+.react-calendar__tile--now {
+  background: #e2f1da !important;
+  color: #004d32 !important;
 }
 
 .rbc-btn-group:first-child {
