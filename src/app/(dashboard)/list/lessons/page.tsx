@@ -18,7 +18,7 @@ const columns = [
     accessor: "name",
   },
   {
-    header: "Grado y Grupo",
+    header: "Grupo",
     accessor: "class",
   },
   {

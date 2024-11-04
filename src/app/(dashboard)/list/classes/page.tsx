@@ -15,26 +15,26 @@ type Class = {
 
 const columns = [
   {
-    header: "Class Name",
+    header: "Grupo",
     accessor: "name",
   },
   {
-    header: "Capacity",
+    header: "Alumnos",
     accessor: "capacity",
     className: "hidden md:table-cell",
   },
   {
-    header: "Grade",
+    header: "Grado",
     accessor: "grade",
     className: "hidden md:table-cell",
   },
   {
-    header: "Supervisor",
+    header: "Tutor",
     accessor: "supervisor",
     className: "hidden md:table-cell",
   },
   {
-    header: "Actions",
+    header: "Acciones",
     accessor: "action",
   },
 ];
@@ -43,7 +43,7 @@ const ClassListPage = () => {
   const renderRow = (item: Class) => (
     <tr
       key={item.id}
-      className="border-b border-gray-200 even:bg-slate-50 text-sm hover:bg-lamaPurpleLight"
+      className="border-b border-gray-200 even:bg-verdedos-900 text-sm hover:bg-hueso-950"
     >
       <td className="flex items-center gap-4 p-4">{item.name}</td>
       <td className="hidden md:table-cell">{item.capacity}</td>
@@ -70,10 +70,10 @@ const ClassListPage = () => {
         <div className="flex flex-col md:flex-row items-center gap-4 w-full md:w-auto">
           <TableSearch />
           <div className="flex items-center gap-4 self-end">
-            <button className="w-8 h-8 flex items-center justify-center rounded-full bg-lamaYellow">
+            <button className="w-8 h-8 flex items-center justify-center rounded-full bg-verdedos-950">
               <Image src="/filter.png" alt="" width={14} height={14} />
             </button>
-            <button className="w-8 h-8 flex items-center justify-center rounded-full bg-lamaYellow">
+            <button className="w-8 h-8 flex items-center justify-center rounded-full bg-verdedos-950">
               <Image src="/sort.png" alt="" width={14} height={14} />
             </button>
             {role === "admin" && <FormModal table="class" type="create" />}
