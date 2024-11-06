@@ -16,7 +16,7 @@ export default function DashboardLayout({
           href="/"
           className="flex items-center justify-center lg:justify-center gap-0"
         >
-          <Image src="/CBTALogo.png" alt="CBTA Logo" width={120} height={120} />
+          <Image src="/CBTALogo.png" alt="CBTA Logo" width={80} height={80} />
           {/* Eliminar corchetes para mostrar el título y cambiar lg:justify-center por lg:justify-start <span className="hidden lg:block font-bold">Gestión escolar</span> */}
         </Link>
         <Menu />
