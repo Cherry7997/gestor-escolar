@@ -115,6 +115,7 @@ const SingleStudentPage = () => {
       </div>
       {/* RIGHT */}
       <div className="w-full xl:w-1/3 flex flex-col gap-4">
+      <div className="bg-white p-4 rounded-md"></div>
         <Performance />
         <Announcements />
       </div>
