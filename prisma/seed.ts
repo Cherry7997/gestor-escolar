@@ -31,7 +31,7 @@ async function main() {
       data: {
         name: `${i}A`, 
         gradeId: i, 
-        capacity: Math.floor(Math.random() * (20 - 15 + 1)) + 15,
+        capacity: Math.floor(Math.random() * (20 - 15 + 1)) + 15, 
       },
     });
   }
@@ -66,7 +66,7 @@ async function main() {
         phone: `123-456-789${i}`,
         address: `Address${i}`,
         bloodType: "A+",
-        sex: i % 2 === 0 ? UserSex.MALE : UserSex.FEMALE,
+        sex: i % 2 === 0 ? UserSex.MASCULINO : UserSex.FEMENINO,
         subjects: { connect: [{ id: (i % 10) + 1 }] }, 
         classes: { connect: [{ id: (i % 6) + 1 }] }, 
         birthday: new Date(new Date().setFullYear(new Date().getFullYear() - 30)),
@@ -93,20 +93,6 @@ async function main() {
     });
   }
 
-  // PARENT
-  for (let i = 1; i <= 25; i++) {
-    await prisma.parent.create({
-      data: {
-        id: `parentId${i}`,
-        username: `parentId${i}`,
-        name: `PName ${i}`,
-        surname: `PSurname ${i}`,
-        email: `parent${i}@example.com`,
-        phone: `123-456-789${i}`,
-        address: `Address${i}`,
-      },
-    });
-  }
 
   // STUDENT
   for (let i = 1; i <= 50; i++) {
@@ -120,8 +106,7 @@ async function main() {
         phone: `987-654-321${i}`,
         address: `Address${i}`,
         bloodType: "O-",
-        sex: i % 2 === 0 ? UserSex.MALE : UserSex.FEMALE,
-        parentId: `parentId${Math.ceil(i / 2) % 25 || 25}`, 
+        sex: i % 2 === 0 ? UserSex.MASCULINO : UserSex.FEMENINO,
         gradeId: (i % 6) + 1, 
         classId: (i % 6) + 1, 
         birthday: new Date(new Date().setFullYear(new Date().getFullYear() - 10)),
