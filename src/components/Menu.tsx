@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const menuItems = [
   {
-    title: "MENÚ",
+    title: "MENU",
     items: [
       {
         icon: "/home.png",
