@@ -1,4 +1,4 @@
-import { role } from "@/lib/data";
+import { currentUser } from "@clerk/nextjs/server";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -10,19 +10,19 @@ const menuItems = [
         icon: "/home.png",
         label: "Inicio",
         href: "/docente",
-        visible: ["admin", "teacher", "student", "parent"],
+        visible: ["admin", "docente", "estudiante"],
       },
       {
         icon: "/teacher.png",
         label: "Docentes",
         href: "/list/docentes",
-        visible: ["admin", "teacher"],
+        visible: ["admin", "docente"],
       },
       {
         icon: "/student.png",
         label: "Estudiantes",
         href: "/list/estudiantes",
-        visible: ["admin", "teacher"],
+        visible: ["admin", "docente"],
       },
       {
         icon: "/subject.png",
@@ -34,37 +34,37 @@ const menuItems = [
         icon: "/class.png",
         label: "Grupos",
         href: "/list/grupos",
-        visible: ["admin", "teacher"],
+        visible: ["admin", "docente"],
       },
       {
         icon: "/exam.png",
         label: "Exámenes",
         href: "/list/examenes",
-        visible: ["admin", "teacher", "student", "parent"],
+        visible: ["admin", "docente", "estudiante"],
       },
       {
         icon: "/result.png",
         label: "Calificaciones",
         href: "/list/calificaciones",
-        visible: ["admin", "teacher", "student", "parent"],
+        visible: ["admin", "docente", "estudiante"],
       },
       {
         icon: "/attendance.png",
         label: "Asistencia",
         href: "/list/asistencia",
-        visible: ["admin", "teacher", "student", "parent"],
+        visible: ["admin", "docente", "estudiante"],
       },
       {
         icon: "/announcement.png",
         label: "Anuncios",
         href: "/list/anuncios",
-        visible: ["admin", "teacher", "student", "parent"],
+        visible: ["admin", "docente", "estudiante"],
       },
       {
         icon: "/calendar.png",
         label: "Eventos",
         href: "/list/eventos",
-        visible: ["admin", "teacher", "student", "parent"],
+        visible: ["admin", "docente", "estudiante"],
       },
     ],
   },
@@ -75,25 +75,28 @@ const menuItems = [
         icon: "/profile.png",
         label: "Perfil",
         href: "/perfil",
-        visible: ["admin", "teacher", "student", "parent"],
+        visible: ["admin", "docente", "estudiante"],
       },
       {
         icon: "/setting.png",
         label: "Configuración",
         href: "/configuracion",
-        visible: ["admin", "teacher", "student", "parent"],
+        visible: ["admin", "docente", "estudiante"],
       },
       {
         icon: "/logout.png",
         label: "Cerrar sesión",
         href: "/logout",
-        visible: ["admin", "teacher", "student", "parent"],
+        visible: ["admin", "docente", "estudiante"],
       },
     ],
   },
 ];
 
-const Menu = () => {
+const Menu =async () => {
+
+  const user = await currentUser();
+  const role = user?.publicMetadata.role as string;
   return (
     <div className="mt-4 text-sm">
       {menuItems.map((i) => (

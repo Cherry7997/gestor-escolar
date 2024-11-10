@@ -79,7 +79,7 @@ model Class {
   announcements Announcement[]
 }
 
-//Materias
+//Materias (no esta en el menu)
 model Subject {
   id       Int       @id @default(autoincrement())
   name     String    @unique
@@ -87,7 +87,7 @@ model Subject {
   lessons  Lesson[]
 }
 
-//Materia en el horario
+//Materia en el horario, aparece como Materias en el menu
 model Lesson {
   id        Int      @id @default(autoincrement())
   name      String
