@@ -38,18 +38,18 @@ const Login = () => {
 
             <Clerk.GlobalError  className='text-sm text-red-500'/>
             <Clerk.Field  name="identifier" className='flex flex-col gap-2'>
-                <Clerk.Label  className='text-xs text-verdedos-100'>Username</Clerk.Label>
+                <Clerk.Label  className='text-xs text-verdedos-100'>Usuario</Clerk.Label>
                 <Clerk.Input type='text' required className='p-2 rounded-md ring-1 ring-verdedos-100'/>
 
                 <Clerk.FieldError className='text-xs text-red-500'/>
             </Clerk.Field>
             <Clerk.Field name="password" className='flex flex-col gap-2'>
-                <Clerk.Label className='text-xs text-verdedos-100'>Password</Clerk.Label>
+                <Clerk.Label className='text-xs text-verdedos-100'>Contraseña</Clerk.Label>
                 <Clerk.Input type='password' required className='p-2 rounded-md ring-1 ring-verdedos-100'/>
                 <Clerk.FieldError className='text-xs text-red-500'/>
             </Clerk.Field>
 
-            <SignIn.Action submit className='bg-verde-200 text-verdedos-900 my-1 rounded-md text-sm p-[10px]'>Sign In</SignIn.Action>
+            <SignIn.Action submit className='bg-verde-200 text-verdedos-900 my-1 rounded-md text-sm p-[10px]'>Iniciar sesión</SignIn.Action>
         </SignIn.Step>
       </SignIn.Root>
         
