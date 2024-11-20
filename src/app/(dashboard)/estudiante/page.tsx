@@ -14,6 +14,13 @@ const StudentPage = () => {
       </div>
       {/* RIGHT */}
       <div className="w-full lg:w-1/3 flex flex-col gap-8">
+        <div className="bg-white p-4 rounded-md">
+        <h1 className="text-xl font-semibold">
+          Atajos
+        </h1>
+          <div className="mt-4flox gap-4 flex-wrap text-xs text-verde">
+          </div>
+        </div>
         <EventCalendar />
         <Announcements />
       </div>
