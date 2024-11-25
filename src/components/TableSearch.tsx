@@ -13,6 +13,7 @@ const TableSearch = () => {
 
     const params = new URLSearchParams(window.location.search);
     params.set("search", value);
+    params.delete("page");
     router.push(`${window.location.pathname}?${params}`);
   }
   return (
