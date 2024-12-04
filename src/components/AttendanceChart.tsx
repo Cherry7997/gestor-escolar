@@ -17,7 +17,7 @@ import {
 const AttendanceChart = ({
   data,
 }:{
-  data:{name:string,present:number,ausente:number}[]}) => {
+  data:{name:string,presente:number,ausente:number}[]}) => {
   return (
     
       <ResponsiveContainer width="100%" height="90%">

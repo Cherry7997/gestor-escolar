@@ -24,12 +24,12 @@ const AttendanceChartContainer = async () => {
 
     const daysOfWeek = ["L", "M", "Mi", "J", "V"];
 
-    const attendanceMap: { [key: string]: { present: number; ausente: number } } = {
-        L: { present: 0, ausente: 0 },
-        M: { present: 0, ausente: 0 },
-        Mi: { present: 0, ausente: 0 },
-        J: { present: 0, ausente: 0 },
-        V: { present: 0, ausente: 0 },
+    const attendanceMap: { [key: string]: { presente: number; ausente: number } } = {
+        L: { presente: 0, ausente: 0 },
+        M: { presente: 0, ausente: 0 },
+        Mi: { presente: 0, ausente: 0 },
+        J: { presente: 0, ausente: 0 },
+        V: { presente: 0, ausente: 0 },
     };
 
     resData.forEach((item) => {
@@ -41,7 +41,7 @@ const AttendanceChartContainer = async () => {
             const dayName = daysOfWeek[itemDayOfWeek - 1]; // Usa `itemDayOfWeek` en lugar de `dayOfWeek`
 
             if (item.present) {
-                attendanceMap[dayName].present += 1;
+                attendanceMap[dayName].presente += 1;
             } else {
                 attendanceMap[dayName].ausente += 1;
             }
@@ -50,7 +50,7 @@ const AttendanceChartContainer = async () => {
 
     const data = daysOfWeek.map((day) => ({
         name: day,
-        present: attendanceMap[day].present,
+        presente: attendanceMap[day].presente,
         ausente: attendanceMap[day].ausente,
     }));
 
